@@ -1,3 +1,10 @@
+import time, random, json
+from slackclient import SlackClient
+
+slacktoken           = "<slacktoken>"
+
+sc = SlackClient(slacktoken)
+
 class Speech():
     def __init__(self, sourcemessage, sourcechannel):
         targettext = "beep boop"
