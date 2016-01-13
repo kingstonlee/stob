@@ -1,5 +1,6 @@
 import time, random, json
 from slackclient import SlackClient
+from speech import Speech
 
 slacktoken           = "<slacktoken>"
 
@@ -16,6 +17,7 @@ if sc.rtm_connect():
         poweron     = "Beep beep boop"
         chan        = "C0J8WTYTF"
         print sc.api_call("chat.postMessage", as_user="true:", channel=chan, text=poweron)
+        Speech("bah", chan)
 #        while True:
 #            events = sc.rtm_read() # print events
 #            C3POBrain(events)
